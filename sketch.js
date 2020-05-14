@@ -49,7 +49,9 @@ function mouseDragged(){
 }
 
 function mouseReleased(){
-    
-    Matter.Body.setStatic( ball.body , false);
+    if(ball != null){
+        Matter.Body.setStatic( ball.body , false);
+    }
+   
 }
 
