@@ -41,13 +41,18 @@ function draw(){
     
 }
 function mouseDragged(){
+    if(ball != null){
+        ball.changePosition();
+    }
     
-    ball.changePosition();
     
 }
 
 function mouseReleased(){
-    ball.fly();
+    if(ball != null){
+        ball.fly();  
+    }
+    
    
 }
 
