@@ -41,17 +41,15 @@ function draw(){
     
 }
 function mouseDragged(){
-    if(ball != null){
-        ball.changePosition();
+    if(this.body.position.x<275 || mouseX<275){
+        Matter.Body.setPosition(ball.body , {x : mouseX , y:mouseY});
     }
     
     
 }
 
 function mouseReleased(){
-    if(ball != null){
-        ball.fly();  
-    }
+    Matter.Body.setStatic( ball.body , false);
     
    
 }

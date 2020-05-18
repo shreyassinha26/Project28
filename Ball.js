@@ -20,14 +20,5 @@ class Ball{
         circle(this.body.position.x , this.body.position.y , 2*this.radius);
         
       }
-      fly(){
-        
-        Matter.Body.setStatic( this.body , false);
       
-      }
-      changePosition(){
-        if(this.body.position.x<275 || mouseX<275){
-          Matter.Body.setPosition(this.body , {x : mouseX , y:mouseY});
-      }
-      }
 }
