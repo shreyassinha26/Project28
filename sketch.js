@@ -41,7 +41,7 @@ function draw(){
     
 }
 function mouseDragged(){
-    if(this.body.position.x<275 || mouseX<275){
+    if(ball.body.position.x<275 || mouseX<275){
         Matter.Body.setPosition(ball.body , {x : mouseX , y:mouseY});
     }
     
