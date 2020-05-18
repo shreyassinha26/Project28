@@ -4,11 +4,11 @@ class Ball{
             'restitution':0.8,
             'friction':1.0,
             'density':1.0,
-            'isStatic':true
+            
         }
         this.body = Bodies.circle(x, y,radius, options);
         this.radius = radius;
-        
+        Matter.Body.setStatic(this.body , true);
         
         World.add(world, this.body);
       }
