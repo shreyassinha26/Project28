@@ -14,7 +14,7 @@ function setup(){
     var canvas = createCanvas(1200,600);
     engine = Engine.create();
     world = engine.world;
-
+        
 
     ground = new Ground(600,height-10,1200,20);
     ball = new Ball(250 , 400 , 20);
@@ -28,6 +28,7 @@ function draw(){
     background(0 , 255 , 0);
     Engine.update(engine);
     strokeWeight(0);
+    console.log(ball.body);
     ball.display();
     ground.display();
     
@@ -51,5 +52,4 @@ function mouseReleased(){
     
    
 }
-
 
