@@ -8,9 +8,7 @@ var box1, box2 , box3;
 var ground;
 var ball, launcher;
 
-function preload() {
-    backgroundImg = loadImage("sprites/bg.png");
-}
+
 
 function setup(){
     var canvas = createCanvas(1200,600);
