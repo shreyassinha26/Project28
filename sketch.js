@@ -11,24 +11,24 @@ var ball, launcher;
 
 
 function setup(){
-    var canvas = createCanvas(1200,600);
+    createCanvas(1200,600);
     engine = Engine.create();
     world = engine.world;
         
 
-    ground = new Ground(600,height-10,1200,20);
-    ball = new Ball(250 , 400 , 20);
+    ground = new Ground(600,590,1200,20);
+    ball = new Ball(250 , 200 , 20);
     box1 = new Box(1100 ,440 , 10 , 300 );
     box2 = new Box(900 , 440 , 10 , 300);
     box3 = new Box(1000 , 585 , 200 , 10);
-    launcher = new Launcher(ball.body,{x:300 , y:400});
+    launcher = new Launcher(ball.body,{x:300 , y:200});
 }
 
 function draw(){
-    background(0 , 255 , 0);
+    background(100);
     Engine.update(engine);
     strokeWeight(0);
-    console.log(ball.body);
+    
     ball.display();
     ground.display();
     
@@ -36,7 +36,7 @@ function draw(){
     box1.display();   
     box2.display();
     launcher.display(); 
-    
+    drawSprites();
     
 }
 function mouseDragged(){
